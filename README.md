@@ -9,7 +9,7 @@ To set up Flask, please follow these steps:
 git clone https://github.com/rennie-bee/scd-provider-chatbot.git
 ```
 
-1. Navigate to the directory:
+1. Navigate to the root directory:
 ```bash
 cd scd-chatbot-flask-server
 ```
