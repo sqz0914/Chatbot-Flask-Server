@@ -118,7 +118,7 @@ class ChatMessage:
             }
         )
         if 'Item' in response:
-            # Split session_id_timestamp to reconstruct original session_id and timestamps
+            # Split user_session_id to reconstruct original user_id and session_id
             user_id, session_id = response['Item']['user_session_id'].split('#')
             return cls(user_id, session_id, response['Item']['message_id'], response['Item']['timestamp'], response['Item']['user_input'], response['Item']['user_input_timestamp'], response['Item']['chatbot_response'], response['Item']['chatbot_response_timestamp'])
         else:
