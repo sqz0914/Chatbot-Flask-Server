@@ -97,7 +97,7 @@ def create_embeddings():
 ######################################################################
 #  START CHAT SESSION
 ######################################################################
-@application.route('/chat/<string:user_id>/start_session', methods=['POST'])
+@application.route('/chat/<string:user_id>', methods=['POST'])
 def start_chat(user_id):
     # Generate a unique session ID
     session_id = str(uuid.uuid4())
@@ -220,7 +220,7 @@ def update_chatbot_response_timestamp(user_id, session_id, message_id):
         if not items:
             return jsonify({'error': 'No item found with the given ID'}), 404
         
-        primary_key = items[0]['user_session_id']  # Replace 'PrimaryKey' with the name of your table's primary key attribute
+        primary_key = items[0]['user_session_id']
         sort_key = items[0]['timestamp']
         # Update the item in the main table
         chat_message_table.update_item(
