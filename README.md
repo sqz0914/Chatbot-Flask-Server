@@ -6,7 +6,7 @@ To set up Flask, please follow these steps:
 
 2. Clone the repository:
 ```bash
-git clone https://github.com/rennie-bee/scd-provider-chatbot.git
+git clone https://github.com/sqz0914/scd-chatbot-flask-server.git
 ```
 
 1. Navigate to the server directory:
